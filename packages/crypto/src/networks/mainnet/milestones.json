@@ -61,7 +61,6 @@
         "maxPayload": 21000000
     },
     "multiPaymentLimit": 300,
-    "staticFees": false,
     "fees": {
       "staticFees": {
         "transfer": 90,
