@@ -27,14 +27,6 @@ export const defaults = {
         cert: process.env.CORE_API_SSL_CERT,
     },
     // @see https://github.com/wraithgar/hapi-rate-limit
-    rateLimit: {
-        enabled: !process.env.CORE_API_RATE_LIMIT,
-        pathLimit: false,
-        userLimit: process.env.CORE_API_RATE_LIMIT_USER_LIMIT || 100,
-        userCache: {
-            expiresIn: process.env.CORE_API_RATE_LIMIT_USER_EXPIRES || 60000,
-        },
-    },
     pagination: {
         limit: 100,
     },
