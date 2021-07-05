@@ -224,7 +224,7 @@ fi
 cd "$HOME/core-bridgechain"
 HAS_REMOTE=$(git branch -a | fgrep -o "remotes/origin/without-rate")
 if [ ! -z "$HAS_REMOTE" ]; then
-    git checkout chore/without-rate
+    git checkout without-rate
 fi
 
 YARN_SETUP="N"
