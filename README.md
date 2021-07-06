@@ -1,4 +1,4 @@
-# Core Infinity
+# Core Blockchain Infinity
 
 <p align="center">
     <img src="https://raw.githubusercontent.com/InfinitySoftwareLTD/core-master-INFI/chore/bridgechain-changes/banner_infi.png" />
