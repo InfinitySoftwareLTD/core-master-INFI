@@ -60,7 +60,7 @@ infinity forger:start
 
 #### Check status and logs relay and delegate
 
-<details><summary>Configuration forger</summary>
+<details><summary>Log relay & forger</summary>
 
 ```bash
 # status
