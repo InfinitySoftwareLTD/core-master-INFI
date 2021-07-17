@@ -28,6 +28,7 @@ export const defaults = {
     },
     // @see https://github.com/wraithgar/hapi-rate-limit
     rateLimit: {
+        userPathLimit: false,
         enabled: !process.env.CORE_API_RATE_LIMIT,
         pathLimit: false,
         trustProxy: false,
