@@ -3,7 +3,7 @@ export const defaults = {
     host: process.env.CORE_API_HOST || "0.0.0.0",
     port: process.env.CORE_API_PORT || 4003,
     cache: {
-        enabled: true,
+        enabled: false,
         /**
          * How many seconds the server will try to complete the request and cache the result.
          *
@@ -16,7 +16,7 @@ export const defaults = {
          * If you experience issues with the cache timeout, which is indicated by a 503 status codes,
          * you should consider upgrading your hardware or tweak your PostgreSQL settings.
          */
-        generateTimeout: process.env.CORE_API_CACHE_TIMEOUT || 80000,
+        generateTimeout: process.env.CORE_API_CACHE_TIMEOUT || 10000,
     },
     // @see https://hapijs.com/api#-serveroptionstls
     ssl: {
@@ -26,16 +26,13 @@ export const defaults = {
         key: process.env.CORE_API_SSL_KEY,
         cert: process.env.CORE_API_SSL_CERT,
     },
+    // @see https://github.com/wraithgar/hapi-rate-limit
     rateLimit: {
         enabled: !process.env.CORE_API_RATE_LIMIT,
         pathLimit: false,
-        userLimit: process.env.CORE_API_RATE_LIMIT_USER_LIMIT || 10000,
-        userCache: {
-            expiresIn: process.env.CORE_API_RATE_LIMIT_USER_EXPIRES || 600000,
-        },
+        trustProxy: false,
+        userLimit: process.env.CORE_API_RATE_LIMIT_USER_LIMIT || 100,
     },
-    
-    // @see https://github.com/wraithgar/hapi-rate-limit
     pagination: {
         limit: 100,
     },
